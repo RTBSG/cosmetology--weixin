@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/book/book",
+    "pages/technician/technician",
+    "pages/technicain_detail/technicain_detail",
+    "pages/edit_addr/edit_addr",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#37383c",
+    "navigationBarTitleText": "美容",
+    "navigationBarTextStyle":"white"
+  },
+  "usingComponents":{
+    "van-tab": "/miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index",
+    "van-button": "/miniprogram_npm/@vant/weapp/button/index",
+    "van-card": "/miniprogram_npm/@vant/weapp/card/index",
+    "van-tabbar": "/miniprogram_npm/@vant/weapp/tabbar/index",
+    "van-tabbar-item": "/miniprogram_npm/@vant/weapp/tabbar-item/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
+    "van-calendar": "/miniprogram_npm/@vant/weapp/calendar/index",
+    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index"
+    
+
+  },
+  "tabBar": {
+    "color":"#a0c69d",
+    "selectedColor":"#B56DCC",
+    "backgroundColor":"#f6f6f7",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/house-heart.png",
+      "selectedIconPath":"images/house-heart-fill.png"
+    }, {
+      "pagePath": "pages/technician/technician",
+      "text": "商品",
+      "iconPath":"images/box.png",
+      "selectedIconPath":"images/box_select.png"
+    }, {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath":"images/people.png",
+      "selectedIconPath":"images/people_select.png"
+    }
+    
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<!--<loading hidden="{{!loading}}">
+	{{title}}
+</loading>-->
+<view class="container">
+
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+    <!--banner-->
+    <view class="swiper">
+      <swiper>
+        <block wx:for-items="{{banner_url}}" wx:key="item.id">
+          <swiper-item>
+            <block wx:if="{{item}}">
+              <image src="{{item}}" mode="aspectFill" />
+            </block>
+            <block wx:else>
+              <image src="../../images/default_pic.png" mode="aspectFill"></image>
+            </block>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <van-tabs active="{{ active }}" bind:change="switchTab">
+      <van-tab title="所有" name="0" slot="0"></van-tab>
+      <block wx:for="{{navTopItems}}" wx:key="item.itemId">
+        <van-tab title="{{item.itemName}}" name="{{item.itemId}}" slot="{{item.itemId}}"></van-tab>
+      </block>
+    </van-tabs>
+
+    <view wx:if="{{navSectionItems}}">
+      <block wx:for="{{navSectionItems}}" wx:key="item.itemId">
+        <wxs src="./subutil.wxs" module="tools" />
+        <van-card  price="{{item.salePrice}}" tag="{{item.isHot==0?'hot':''}}"   desc="{{item.itemDescribe ? tools.sub(item.itemDescribe) : '没有描述信息'}}" title="{{item.itemName}}" thumb="{{item.itemDefaultImageUrl !== null ? item.itemDefaultImageUrl : '../../../../images/recommend_img_03.png'}}">
+          <view slot="footer">
+            <van-button bindtap="bookTap" data-itemid="{{item.itemId}}"  color="rgb(181, 109, 204)" size="small">预约</van-button>
+          </view>
+        </van-card>
+      </block>
+
+    </view>
+
+  
+  </scroll-view>
+</view>

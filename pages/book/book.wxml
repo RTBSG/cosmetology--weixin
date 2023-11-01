@@ -1,0 +1,40 @@
+<view class="container">
+
+  <view class="ar_coverpath">
+    <image src="../../images/banner_02.png" mode="aspectFill"></image>
+  </view>
+
+  <view class="ar_picker">
+    <view class="ar_picker_wrap">
+      <picker bindchange="bindAddrPickerChange" value="{{addrIndex}}" range="{{addrArray}}">
+        <view>
+          <text>{{addrArray[addrIndex]}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="ar_picker">
+    <van-cell-group>
+      <van-cell title="预约日期" icon="calendar-o"value="{{ date }}" bind:click="onDateDisplay" />
+      <van-calendar show="{{ show }}" bind:close="onDateClose" bind:confirm="onDateConfirm" />
+    </van-cell-group>
+    <van-cell-group>
+      <picker mode="time" placeholder="选择时间"  value="{{time}}" start="{{minHour}}" end="{{maxHour}}" bindchange="bindTimeChange">
+        <van-cell title="预约时间"  icon="clock-o" value="{{ dateTime }}" bind:click="onTimeDisplay" />
+      </picker>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field left-icon="phone-o" placeholder="{{placeholder}}" model:value="{{ phone }}" label="联系方式"  border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <van-button size="small" class="ar_button" color="linear-gradient(to right, #4bb0ff, #6149f6)" bindtap="bindToastTap">
+    确认预定
+</van-button>
+  <toast hidden="{{bookSuccessHidden}}" bindchange="hideSuccessToast">
+    预定成功
+  </toast>
+  <toast hidden="{{bookFailHidden}}" bindchange="hideFailToast">
+  {{ toastFailMsg}}
+  </toast>
+</view>
