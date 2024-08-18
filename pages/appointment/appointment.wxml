@@ -1,0 +1,18 @@
+<view class="container">
+
+<wxs src="../../utils/subutil.wxs" module="tools" />
+<block wx:for="{{bookItem}}" wx:key="item.itemId">
+
+      <van-card  class="product" tag="{{item.isHot==0?'hot':''}}"  desc="{{item.itemDescribe ? tools.sub(item.itemDescribe) : '没有描述信息'}}" title="{{item.itemName}}" thumb="{{item.itemDefaultImageUrl !== null ? item.itemDefaultImageUrl : '../../../../images/recommend_img_03.png'}}">
+        <view style="display: flex; justify-content: space-between;" slot="footer">服务时间：{{item.appointmentData}} {{item.appointmentTime}} </view>
+        <view style="display: flex; justify-content: space-between;" slot="footer">预约电话：{{item.appointmentPhone}} </view>
+        <van-divider slot="footer" />
+        <van-button  slot="footer"  custom-style="background-color: #ff6600; border: 1px solid #ff6600; margin-right: 8px;" size="mini" type="primary" data-appointment-id="{{item.appointmentId}}"    data-item-id="{{item.beautyItemId}}" bind:click="update">修改</van-button>
+        <van-button slot="footer"  size="mini" type="danger" bind:click="canch">取消</van-button>
+      </van-card>
+
+      
+    
+
+    </block>
+</view>

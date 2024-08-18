@@ -18,7 +18,8 @@ Page({
     phone: "",
     itemid: "",
     placeholder: "",
-    toastFailMsg:"预定失败，请稍后再试"
+    toastFailMsg:"预定失败，请稍后再试",
+    bookItem:[]
 
   },
   onDateDisplay() {
@@ -45,9 +46,23 @@ Page({
     });
   },
   onLoad: function (options) {
+    let bookItem = JSON.parse(options.bookItem);
+    console.log('options',options)
     this.setData({
-      itemid: options.itemid
-    })
+      itemid: options.itemid,
+      bookItem:bookItem,
+      date:bookItem[0].appointmentData,
+      dateTime:bookItem[0].appointmentTime,
+      phone:bookItem[0].appointmentPhone
+    }, function () {
+      console.log('setData 回调执行了');
+      console.log('itemid:', this.data.itemid);
+      console.log('bookItem:', this.data.bookItem);
+      console.log('date:', this.data.date);
+      console.log('dateTime:', this.data.dateTime);
+      console.log('phone:', this.data.phone);
+    });
+    
   },
   // 地址选择
   bindAddrPickerChange: function (e) {
@@ -57,6 +72,7 @@ Page({
     })
   },
   bindToastTap: function () {
+    console.log('bookItem',this.data.bookItem)
     // 校验日期和手机号
     if (!this.isValidDate(this.data.date)) {
       wx.showToast({
@@ -79,25 +95,51 @@ Page({
       });
       return;
     }
-    http.postRequest('appointments/insert/appointment', {
-      appointmentData: this.data.date,
-      appointmentTime: this.data.time,
-      beautyItemId: this.data.itemid,
-      appointmentPhone: this.data.phone
-    },
-    (res) => {
-      this.setData({
-        bookSuccessHidden:false
-    })
-  
-    },
-    (res) => {
+
+    console.log('appointmentId1111',this.data.bookItem[0])
+    if(this.data.bookItem[0].appointmentId!=''||this.data.bookItem[0].appointmentId!='undefined'){
+      var appointmentId;
       
-      this.setData({
-        toastFailMsg:res,
-        bookFailHidden:false
-    })
-    })
+      http.postRequest('appointments/update/appointment', {
+        appointmentData: this.data.date,
+        appointmentTime: this.data.time,
+        beautyItemId: this.data.itemid,
+        appointmentPhone: this.data.phone,
+        appointmentId: this.data.bookItem[0].appointmentId
+      },
+      (res) => {
+        this.setData({
+          bookSuccessHidden:false
+      })
+      },
+      (res) => {
+        this.setData({
+          toastFailMsg:res,
+          bookFailHidden:false
+      })
+      })
+    }else{
+      http.postRequest('appointments/insert/appointment', {
+        appointmentData: this.data.date,
+        appointmentTime: this.data.time,
+        beautyItemId: this.data.itemid,
+        appointmentPhone: this.data.phone
+      },
+      (res) => {
+        this.setData({
+          bookSuccessHidden:false
+      })
+    
+      },
+      (res) => {
+        
+        this.setData({
+          toastFailMsg:res,
+          bookFailHidden:false
+      })
+      })
+    }
+  
   },
   hideSuccessToast: function () {
     this.setData({

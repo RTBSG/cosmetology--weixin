@@ -1,0 +1,170 @@
+<!--pages/test/index.wxml-->
+<text>pages/test/index.wxml</text>
+<view class="container">
+  <view class="header">
+    <text class="header-title">微美·世纪旗舰店</text>
+    <view class="header-icons">
+      <text class="icon">•••</text>
+      <text class="icon">🔍</text>
+    </view>
+  </view>
+
+  <view class="search-section">
+    <input type="text" class="search-bar" placeholder="搜索..."/>
+  </view>
+
+  <view class="banner">
+    <image src="/assets/banner.jpg" mode="widthFix" class="banner-image"></image>
+    <view class="banner-text">
+      <text class="banner-title">光子嫩肤</text>
+      <text class="banner-subtitle">最新技术</text>
+    </view>
+  </view>
+
+  <view class="menu">
+    <view class="menu-item">
+      <image src="/assets/face.png" class="menu-icon"></image>
+      <text>面部专区</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/hair.png" class="menu-icon"></image>
+      <text>美发护理</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/spa.png" class="menu-icon"></image>
+      <text>SPA专区</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/new.png" class="menu-icon"></image>
+      <text>新人专区</text>
+    </view>
+  </view>
+
+  <view class="recommendations">
+    <text class="recommendations-title">热门推荐</text>
+    <view class="card">
+      <image src="/assets/new.jpg" class="card-image"></image>
+      <text class="card-title">新人专区</text>
+      <text class="card-description">新人活动，日式美甲，美甲套餐一</text>
+      <text class="price">¥100</text>
+      <button class="book-btn">预约</button>
+    </view>
+    <view class="card">
+      <image src="/assets/spa1.jpg" class="card-image"></image>
+      <text class="card-title">SPA专区</text>
+      <text class="card-description">减压香薰按摩，SPA套餐四</text>
+      <text class="price">¥1080</text>
+      <button class="book-btn">预约</button>
+    </view>
+    <view class="card">
+      <image src="/assets/spa2.jpg" class="card-image"></image>
+      <text class="card-title">光子嫩肤</text>
+      <text class="card-description">M22光子嫩肤，美白套餐一</text>
+      <text class="price">¥1080</text>
+      <button class="book-btn">预约</button>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer-item">
+      <text>🏠</text>
+      <text>首页</text>
+    </view>
+    <view class="footer-item">
+      <text>🛠️</text>
+      <text>服务</text>
+    </view>
+    <view class="footer-item">
+      <text>📅</text>
+      <text>预约</text>
+    </view>
+    <view class="footer-item">
+      <text>👤</text>
+      <text>我的</text>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <view class="header">
+    <text class="header-title">微美·世纪旗舰店</text>
+    <view class="header-icons">
+      <text class="icon">•••</text>
+      <text class="icon">🔍</text>
+    </view>
+  </view>
+
+  <view class="search-section">
+    <input type="text" class="search-bar" placeholder="搜索..."/>
+  </view>
+
+  <view class="banner">
+    <image src="/assets/banner.jpg" mode="widthFix" class="banner-image"></image>
+    <view class="banner-text">
+      <text class="banner-title">光子嫩肤</text>
+      <text class="banner-subtitle">最新技术</text>
+    </view>
+  </view>
+
+  <view class="menu">
+    <view class="menu-item">
+      <image src="/assets/face.png" class="menu-icon"></image>
+      <text>面部专区</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/hair.png" class="menu-icon"></image>
+      <text>美发护理</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/spa.png" class="menu-icon"></image>
+      <text>SPA专区</text>
+    </view>
+    <view class="menu-item">
+      <image src="/assets/new.png" class="menu-icon"></image>
+      <text>新人专区</text>
+    </view>
+  </view>
+
+  <view class="recommendations">
+    <text class="recommendations-title">热门推荐</text>
+    <view class="card">
+      <image src="/assets/new.jpg" class="card-image"></image>
+      <text class="card-title">新人专区</text>
+      <text class="card-description">新人活动，日式美甲，美甲套餐一</text>
+      <text class="price">¥100</text>
+      <button class="book-btn">预约</button>
+    </view>
+    <view class="card">
+      <image src="/assets/spa1.jpg" class="card-image"></image>
+      <text class="card-title">SPA专区</text>
+      <text class="card-description">减压香薰按摩，SPA套餐四</text>
+      <text class="price">¥1080</text>
+      <button class="book-btn">预约</button>
+    </view>
+    <view class="card">
+      <image src="/assets/spa2.jpg" class="card-image"></image>
+      <text class="card-title">光子嫩肤</text>
+      <text class="card-description">M22光子嫩肤，美白套餐一</text>
+      <text class="price">¥1080</text>
+      <button class="book-btn">预约</button>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="footer-item">
+      <text>🏠</text>
+      <text>首页</text>
+    </view>
+    <view class="footer-item">
+      <text>🛠️</text>
+      <text>服务</text>
+    </view>
+    <view class="footer-item">
+      <text>📅</text>
+      <text>预约</text>
+    </view>
+    <view class="footer-item">
+      <text>👤</text>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

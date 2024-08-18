@@ -11,6 +11,19 @@ Page({
     addrDate:util.replacePhone(myData.userData().addrs,true)
   },
   // 地址编辑
+
+  appointment:function(e){
+    console.log(e)
+    wx.navigateTo({
+      url:'../appointment/appointment'
+    })
+  },
+  index:function(e){
+    console.log(e)
+    wx.navigateTo({
+      url:'../login/index'
+    })
+  },
   editAddr : function(e){
     console.log(e)
     wx.navigateTo({

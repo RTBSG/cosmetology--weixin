@@ -6,7 +6,9 @@
     "pages/technician/technician",
     "pages/technicain_detail/technicain_detail",
     "pages/edit_addr/edit_addr",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/appointment/appointment",
+    "pages/login/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -25,7 +27,8 @@
     "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
     "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
     "van-calendar": "/miniprogram_npm/@vant/weapp/calendar/index",
-    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index"
+    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-divider": "/miniprogram_npm/@vant/weapp/divider/index"
     
 
   },

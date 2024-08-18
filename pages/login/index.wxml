@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="login-section">
+    <button class="wx-login-btn" open-type="getUserInfo" bindtap="onGetUserProfile">微信登录</button>
+  </view>
+</view>

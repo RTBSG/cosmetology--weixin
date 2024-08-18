@@ -1,0 +1,159 @@
+/* 全局样式重置 */
+page {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  padding-bottom: 60px; /* 为底部导航栏留出空间 */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.search-section {
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.search-bar {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.banner-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: #f1f1f1;
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.recommendations {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.recommendations-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 18px;
+  color: #aa00aa;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  padding: 10px 20px;
+  background-color: #aa00aa;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.book-btn:hover {
+  background-color: #cc00cc;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer-item text {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}

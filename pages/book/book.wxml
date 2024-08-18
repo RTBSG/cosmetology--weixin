@@ -1,8 +1,10 @@
 <view class="container">
 
-  <view class="ar_coverpath">
-    <image src="../../images/banner_02.png" mode="aspectFill"></image>
-  </view>
+  <wxs src="../../utils/subutil.wxs" module="tools" />
+  <block wx:for="{{bookItem}}" wx:key="item.itemId">
+        <van-card  price="{{item.salePrice}}" tag="{{item.isHot==0?'hot':''}}"   desc="{{item.itemDescribe ? tools.sub(item.itemDescribe) : '没有描述信息'}}" title="{{item.itemName}}" thumb="{{item.itemDefaultImageUrl !== null ? item.itemDefaultImageUrl : '../../../../images/recommend_img_03.png'}}">
+        </van-card>
+      </block>
 
   <view class="ar_picker">
     <view class="ar_picker_wrap">
@@ -16,25 +18,25 @@
 
   <view class="ar_picker">
     <van-cell-group>
-      <van-cell title="预约日期" icon="calendar-o"value="{{ date }}" bind:click="onDateDisplay" />
+      <van-cell title="预约日期" icon="calendar-o" model:value="{{date}}" bind:click="onDateDisplay" />
       <van-calendar show="{{ show }}" bind:close="onDateClose" bind:confirm="onDateConfirm" />
     </van-cell-group>
     <van-cell-group>
-      <picker mode="time" placeholder="选择时间"  value="{{time}}" start="{{minHour}}" end="{{maxHour}}" bindchange="bindTimeChange">
-        <van-cell title="预约时间"  icon="clock-o" value="{{ dateTime }}" bind:click="onTimeDisplay" />
+      <picker mode="time" placeholder="选择时间" model:value="{{time}}" start="{{minHour}}" end="{{maxHour}}" bindchange="bindTimeChange">
+        <van-cell title="预约时间" icon="clock-o" model:value="{{dateTime}}" bind:click="onTimeDisplay" />
       </picker>
     </van-cell-group>
     <van-cell-group>
-      <van-field left-icon="phone-o" placeholder="{{placeholder}}" model:value="{{ phone }}" label="联系方式"  border="{{ false }}" />
+      <van-field left-icon="phone-o" placeholder="{{placeholder}}" model:value="{{phone}}" label="联系方式" border="{{ false }}" />
     </van-cell-group>
   </view>
   <van-button size="small" class="ar_button" color="linear-gradient(to right, #4bb0ff, #6149f6)" bindtap="bindToastTap">
     确认预定
-</van-button>
+  </van-button>
   <toast hidden="{{bookSuccessHidden}}" bindchange="hideSuccessToast">
     预定成功
   </toast>
   <toast hidden="{{bookFailHidden}}" bindchange="hideFailToast">
-  {{ toastFailMsg}}
+    {{ toastFailMsg}}
   </toast>
 </view>

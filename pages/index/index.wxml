@@ -29,7 +29,7 @@
 
     <view wx:if="{{navSectionItems}}">
       <block wx:for="{{navSectionItems}}" wx:key="item.itemId">
-        <wxs src="./subutil.wxs" module="tools" />
+        <wxs src="../../utils/subutil.wxs" module="tools" />
         <van-card  price="{{item.salePrice}}" tag="{{item.isHot==0?'hot':''}}"   desc="{{item.itemDescribe ? tools.sub(item.itemDescribe) : '没有描述信息'}}" title="{{item.itemName}}" thumb="{{item.itemDefaultImageUrl !== null ? item.itemDefaultImageUrl : '../../../../images/recommend_img_03.png'}}">
           <view slot="footer">
             <van-button bindtap="bookTap" data-itemid="{{item.itemId}}"  color="rgb(181, 109, 204)" size="small">预约</van-button>

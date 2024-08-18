@@ -211,10 +211,10 @@ function searchAddrFromAddrs(addrid){
 function userData(){
     var arr = {
                 uid:'1',
-                nickname:'山炮',
-                name:'张三',
+                nickname:'幽灵',
+                name:'幽灵',
                 phone:'13833337998',
-                avatar:'../../images/avatar.png',
+                avatar:'../../images/avatar.gif',
                 addrs:[
                    {
                         addrid:'1',

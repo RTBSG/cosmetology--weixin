@@ -5,7 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    var logs = wx.getStorageSync('token')
+    var token = wx.getStorageSync('token')
     wx.setStorageSync('token', token)
   },
   getUserInfo:function(cb){

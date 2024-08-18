@@ -1,0 +1,8 @@
+/* pages/appointment/appointment.wxss */
+.product {
+  padding: 10px; /* 设置内边距以增加内容区域的可见性 */
+  margin: 10px; /* 设置外边距以增加不同商品项之间的间隔 */
+  background-color: #f8f6fd; /* 设置默认的背景颜色 */
+  border-radius: 10px;
+  /* 设置不同商品项的不同背景颜色 */
+}

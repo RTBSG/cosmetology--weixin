@@ -118,7 +118,7 @@
     color:#8fc31f;
 }
 .active_purple{
-    color:#aa2adf;
+    color:rgb(181, 109, 204);
 }
 
 

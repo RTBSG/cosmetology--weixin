@@ -46,12 +46,12 @@ function post(url, params, onSuccess, onFailed, useToken) {
 
 function request(url, params, method, onSuccess, onFailed, useToken) {
   // 判断是否携带token，token在用户登录后保存在app.js定义的对象中可根据自己保存策略获取。
-
+  console.log('useToken',useToken)
   // 读本地缓存
   useToken == null || useToken == "undefined" ?
       (header["Authorization"] =wx.getStorageSync("token")): 
-      
       delete header.Authorization;
+      console.log('token',wx.getStorageSync("token"))
 
   // 读全局的globalData
   //  useToken == null || useToken == "undefined" ?
@@ -69,7 +69,12 @@ function request(url, params, method, onSuccess, onFailed, useToken) {
       header: header,
       success: function (res) {
           wx.hideLoading();
-          console.log("响应：", res.data);
+          console.log("res ", res);
+        if(res.header&&res.header.Authorization!=''){
+          console.log('res.header.Authorization',res.header.Authorization)
+          wx.setStorageSync('token', res.header.Authorization);
+        }
+         
           if (res.data) {
               /** start 根据需求 接口的返回状态码进行处理 */
               if (res.statusCode == 200) {
